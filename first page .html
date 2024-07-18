@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-color: #eaaeae;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #f8f8f828;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(62, 60, 60, 0.1);
+        }
+        header {
+            background-color: #b3eef4b3;
+            color: #070707;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0774e0;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+        }
+        nav .links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ececf1;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #25b5fd;
+        }
+        .login-button {
+            background-color: #25b5fd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #1a8dc9;
+        }
+        .content {
+            padding: 20px;
+            text-align: left;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #b3eef4;
+            color: #070707;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-radius: 0 0 8px 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Detect and Identify Languages in Text with Ease</h1>
+        </header>
+        <nav>
+            <div class="links">
+                <a href="#about">About Us</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="login page.html" class="login-button">Login</a>
+        </nav>
+        <div class="content">
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Learn more about our mission and the technology behind our language detection service.</p>
+            </section>
+            <section id="how-it-works">
+                <h2>How It Works</h2>
+                <ul>
+                    <li><strong>1. Enter Your Text:</strong> Copy and paste or type the text you want to detect into the input box.</li>
+                    <li><strong>2. Click 'Detect Language':</strong> Hit the detect button to process your text.</li>
+                    <li><strong>3. View Results:</strong> Instantly see the identified language and confidence level.</li>
+                </ul>
+                <div id="result"></div>
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Email: translate.language@gmail.com</p>
+                <p>Phone: +1234567890</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Your Company. All rights reserved.
+    </footer> 
+    <!-- Link to the JavaScript file -->
+   
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: auto;
+            background: rgba(249, 249, 249, 0.18);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(154, 130, 130, 0.24);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: calc(100% - 16px);
+            padding: 10px;
+            border: 1px solid #0a0a0a;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group .forgot-password {
+            text-align: right;
+            font-size: 14px;
+            color: #f11708;
+        }
+        .form-group .forgot-password a {
+            color: #f0f4f8;
+            text-decoration: none;
+        }
+        .btn-login {
+            background-color: #0411f8;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-login:hover {
+            background-color: #695ef8;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!--<img src="logo.png" alt="Company Logo" class="logo">-->
+        <h2>Login</h2>
+        <form action="last page.html" method="POST">
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn-login">
+            </div>
+            <div class="form-group forgot-password">
+                <a href="forgot_password.php">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        async function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                window.location.href = '/translator';
+            } else {
+                alert(result.message);
+            }
+        }
+    </script>
+    
+      <script src="backend.js"></script>
+      
+</body>
+</html>
